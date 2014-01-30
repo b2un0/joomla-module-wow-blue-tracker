@@ -9,15 +9,26 @@
 
 defined('_JEXEC') or die;
 
+JFactory::getDocument()->addScript(JUri::base(true) . '/modules/' . $module->module . '/tmpl/default.js');
 JFactory::getDocument()->addStyleSheet(JUri::base(true) . '/modules/' . $module->module . '/tmpl/default.css');
 ?>
 <?php if ($params->get('ajax')) : ?>
     <div class="mod_wow_blue_tracker ajax"></div>
 <?php else: ?>
-    <div class="mod_wow_blue_tracker">
+    <ul class="mod_wow_blue_tracker">
         <?php foreach ($posts as $post): ?>
-            <?php echo JHtml::link((string)$post->link, (string)$post->title, array('target' => '_blank', 'title' => (string)$post->title)); ?>
-            <br/>
+            <li>
+                <span class="header"><a href="#" title="<?php echo $post->title; ?>"><?php echo $post->title; ?></a></span>
+
+                <div>
+                    <small><?php echo JHtml::date($post->pubDate, JText::_('DATE_FORMAT_LC2')); ?></small>
+
+                    <p>
+                        <?php echo $post->description; ?>
+                        <?php echo JHtml::link($post->link, JText::_('MOD_WOW_BLUE_TRACKER_READMORE'), array('target' => '_blank', 'title' => $post->title)); ?>
+                    </p>
+                </div>
+            </li>
         <?php endforeach; ?>
-    </div>
+    </ul>
 <?php endif; ?>
