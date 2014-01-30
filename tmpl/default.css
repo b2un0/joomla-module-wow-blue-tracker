@@ -1,0 +1,13 @@
+.mod_wow_blue_tracker {
+}
+
+.mod_wow_blue_tracker a {
+    color: #00B4FF;
+    text-overflow: ellipsis;
+}
+
+.mod_wow_blue_tracker a:hover,
+.mod_wow_blue_tracker a:focus,
+.mod_wow_blue_tracker a:active {
+    text-decoration: underline;
+}
