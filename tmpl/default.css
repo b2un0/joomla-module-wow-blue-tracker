@@ -1,6 +1,11 @@
+.mod_wow_blue_tracker {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .mod_wow_blue_tracker a {
     color: #00B4FF;
-    text-overflow: ellipsis;
 }
 
 .mod_wow_blue_tracker a:hover,

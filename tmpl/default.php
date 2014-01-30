@@ -16,8 +16,8 @@ JFactory::getDocument()->addStyleSheet(JUri::base(true) . '/modules/' . $module-
 <?php else: ?>
     <div class="mod_wow_blue_tracker">
         <?php foreach ($posts as $post): ?>
-            <?php echo JHtml::link((string)$post->link, (string)$post->title, array('target' => '_blank')); ?>
-            <pre><?php # print_r($post); ?></pre>
+            <?php echo JHtml::link((string)$post->link, (string)$post->title, array('target' => '_blank', 'title' => (string)$post->title)); ?>
+            <br/>
         <?php endforeach; ?>
     </div>
 <?php endif; ?>

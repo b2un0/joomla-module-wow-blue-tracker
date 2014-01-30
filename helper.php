@@ -50,6 +50,7 @@ abstract class ModWowBlueTrackerHelper
         foreach ($result->channel->item as $item) {
             if ($params->get('topics', 1)) {
                 if (strpos((string)$item->description, '[Blue Topic]') === 0) {
+                    $item->description = str_replace('[Blue Topic]', '', (string)$item->description);
                     $output[] = $item;
                 }
             } else {

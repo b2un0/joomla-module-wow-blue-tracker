@@ -28,6 +28,7 @@
     <config>
         <fields name="params" addfieldpath="/modules/mod_wow_blue_tracker/fields/">
             <fieldset name="basic">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
                 <field name="language" type="list" default="" required="true" label="MOD_WOW_BLUE_TRACKER_LANGUAGE_LABEL">
                     <option>JSELECT</option>
                     <option value="en-US">English - US</option>
@@ -43,16 +44,11 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="description" type="radio" class="btn-group" default="1" required="true" label="MOD_WOW_BLUE_TRACKER_DESCRIPTION_LABEL" description="MOD_WOW_BLUE_TRACKER_DESCRIPTION_DESC">
-                    <option value="1">JYES</option>
-                    <option value="0">JNO</option>
-                </field>
                 <field name="cache_time" type="text" filter="integer" default="60" size="5" required="true" label="MOD_WOW_BLUE_TRACKER_CACHE_LABEL" description="MOD_WOW_BLUE_TRACKER_CACHE_DESC" />
                 <field name="timeout" type="text" filter="integer" default="10" size="5" required="true" label="MOW_WOW_BLUE_TRACKER_TIMEOUT_LABEL" description="MOW_WOW_BLUE_TRACKER_TIMEOUT_DESC" />
                 <field name="ajax" type="ajax" class="btn-group" label="Ajax" default="0" />
             </fieldset>
             <fieldset name="advanced">
-                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
                 <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
             </fieldset>
         </fields>

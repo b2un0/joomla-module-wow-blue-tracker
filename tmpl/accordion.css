@@ -1,0 +1,30 @@
+.mod_wow_blue_tracker {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mod_wow_blue_tracker a,
+.mod_wow_blue_tracker h4 {
+    color: #00B4FF;
+}
+
+.mod_wow_blue_tracker p {
+    color: #00deff;
+    display: none;
+    font-style: italic;
+}
+
+.mod_wow_blue_tracker h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    margin: 0 0 10px 0;
+}
+
+.mod_wow_blue_tracker a:hover,
+.mod_wow_blue_tracker a:focus,
+.mod_wow_blue_tracker a:active {
+    text-decoration: underline;
+}
