@@ -9,6 +9,10 @@
 
 defined('_JEXEC') or die;
 
+if (version_compare(JVERSION, 3, '>=')) {
+    JHtml::_('jquery.framework');
+}
+
 JFactory::getDocument()->addScript(JUri::base(true) . '/modules/' . $module->module . '/tmpl/default.js');
 JFactory::getDocument()->addStyleSheet(JUri::base(true) . '/modules/' . $module->module . '/tmpl/default.css');
 ?>
