@@ -14,10 +14,6 @@
     font-style: italic;
 }
 
-.mod_wow_blue_tracker li:first-child div {
-    display: block;
-}
-
 .mod_wow_blue_tracker div small {
     display: block;
     margin-bottom: 5px;
