@@ -38,7 +38,7 @@
                     <option value="fr">Français</option>
                     <option value="ru">Русский</option>
                 </field>
-                <field name="rows" type="text" filter="integer" default="10" size="5" required="true" label="MOD_WOW_BLUE_TRACKER_ROWS_LABEL" description="MOD_WOW_BLUE_TRACKER_ROWS_DESC" />
+                <field name="rows" type="integer" first="1" step="1" last="40" filter="integer" default="10" required="true" label="MOD_WOW_BLUE_TRACKER_ROWS_LABEL" description="MOD_WOW_BLUE_TRACKER_ROWS_DESC" />
                 <field name="topics" type="radio" class="btn-group" default="1" required="true" label="MOD_WOW_BLUE_TRACKER_TOPICS_LABEL" description="MOD_WOW_BLUE_TRACKER_TOPICS_DESC">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>

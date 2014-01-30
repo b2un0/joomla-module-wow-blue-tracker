@@ -9,12 +9,12 @@
     color: #00B4FF;
 }
 
-.mod_wow_blue_tracker div {
+.mod_wow_blue_tracker li div {
     display: none;
     font-style: italic;
 }
 
-.mod_wow_blue_tracker div:first-child {
+.mod_wow_blue_tracker li:first-child div {
     display: block;
 }
 

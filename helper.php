@@ -38,35 +38,6 @@ abstract class ModWowBlueTrackerHelper
             return;
         }
 
-        $result = self::remoteContent($params);
-
-        $result = simplexml_load_string($result);
-
-        if (!($result instanceof SimpleXMLElement)) {
-            return JText::_('ERROR');
-        }
-
-        $output = array();
-        foreach ($result->channel->item as $item) {
-            if ($params->get('topics', 1)) {
-                if (strpos((string)$item->description, '[Blue Topic]') === 0) {
-                    $item->description = str_replace('[Blue Topic]', '', (string)$item->description);
-                    $output[] = $item;
-                }
-            } else {
-                $output[] = $item;
-            }
-
-            if (count($output) >= $params->get('rows', 10)) {
-                break;
-            }
-        }
-
-        return $output;
-    }
-
-    private static function remoteContent(JRegistry &$params)
-    {
         $url = 'http://blue.mmo-champion.com/rss/?language=' . $params->get('language', 'en-US');
 
         $cache = JFactory::getCache('wow', 'output');
@@ -92,6 +63,29 @@ abstract class ModWowBlueTrackerHelper
             return __CLASS__ . ' HTTP-Status ' . JHtml::_('link', 'http://wikipedia.org/wiki/List_of_HTTP_status_codes#' . $result->code, $result->code, array('target' => '_blank'));
         }
 
-        return $result->body;
+
+        $result->body = simplexml_load_string($result->body);
+
+        if (!($result->body instanceof SimpleXMLElement)) {
+            return JText::_('ERROR');
+        }
+
+        $output = array();
+        foreach ($result->body->channel->item as $item) {
+            if ($params->get('topics', 1)) {
+                if (strpos((string)$item->description, '[Blue Topic]') === 0) {
+                    $item->description = str_replace('[Blue Topic]', '', (string)$item->description);
+                    $output[] = $item;
+                }
+            } else {
+                $output[] = $item;
+            }
+
+            if (count($output) >= $params->get('rows', 10)) {
+                break;
+            }
+        }
+
+        return $output;
     }
 }
