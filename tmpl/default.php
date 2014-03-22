@@ -22,7 +22,9 @@ JFactory::getDocument()->addStyleSheet(JUri::base(true) . '/modules/' . $module-
     <ul class="mod_wow_blue_tracker">
         <?php foreach ($posts as $post): ?>
             <li>
-                <span class="header"><a href="<?php echo $post->link; ?>" title="<?php echo $post->title; ?>"><?php echo $post->title; ?></a></span>
+                <span class="header">
+                    <?php echo JHtml::link($post->link, $post->title, array('target' => '_blank', 'title' => $post->title)); ?>
+                </span>
 
                 <div>
                     <small><?php echo JHtml::date($post->pubDate, JText::_('DATE_FORMAT_LC2')); ?></small>
