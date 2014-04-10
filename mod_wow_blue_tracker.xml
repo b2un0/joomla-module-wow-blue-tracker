@@ -43,6 +43,10 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
+                <field name="expand" type="radio" class="btn-group" default="0" required="true" label="MOD_WOW_BLUE_TRACKER_EXPAND_LABEL" description="MOD_WOW_BLUE_TRACKER_EXPAND_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
                 <field name="cache_time" type="text" filter="integer" default="60" size="5" required="true" label="MOD_WOW_BLUE_TRACKER_CACHE_LABEL" description="MOD_WOW_BLUE_TRACKER_CACHE_DESC" />
                 <field name="timeout" type="text" filter="integer" default="10" size="5" required="true" label="MOW_WOW_BLUE_TRACKER_TIMEOUT_LABEL" description="MOW_WOW_BLUE_TRACKER_TIMEOUT_DESC" />
                 <field name="ajax" type="ajax" class="btn-group" label="Ajax" default="0" />

@@ -20,14 +20,14 @@ JFactory::getDocument()->addStyleSheet(JUri::base(true) . '/modules/' . $module-
     <div class="mod_wow_blue_tracker ajax"></div>
 <?php else: ?>
     <ul class="mod_wow_blue_tracker">
-        <?php foreach ($posts as $post): ?>
+        <?php foreach ($posts as $key => $post): ?>
             <li>
                 <span class="header">
                     <?php echo JHtml::link($post->link, $post->title, array('target' => '_blank', 'title' => $post->title)); ?>
                 </span>
 
-                <div>
-                    <small><?php echo JHtml::date($post->pubDate, JText::_('DATE_FORMAT_LC2')); ?></small>
+                <div <?php echo ($key == 0 && $params->get('expand')) ? ' class="expand"' : ''; ?>>
+                <small><?php echo JHtml::date($post->pubDate, JText::_('DATE_FORMAT_LC2')); ?></small>
 
                     <p>
                         <?php echo $post->description; ?>
