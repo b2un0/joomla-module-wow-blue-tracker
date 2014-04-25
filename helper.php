@@ -11,7 +11,6 @@ defined('_JEXEC') or die;
 
 abstract class ModWowBlueTrackerHelper
 {
-
     public static function getAjax()
     {
         $module = JModuleHelper::getModule('mod_' . JFactory::getApplication()->input->get('module'));
@@ -42,7 +41,7 @@ abstract class ModWowBlueTrackerHelper
 
         $cache = JFactory::getCache('wow', 'output');
         $cache->setCaching(1);
-        $cache->setLifeTime($params->get('cache_time', 60));
+        $cache->setLifeTime($params->get('cache_time', 60) * 60);
 
         $key = md5($url);
 
