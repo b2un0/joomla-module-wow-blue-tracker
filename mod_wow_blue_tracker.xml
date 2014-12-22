@@ -3,7 +3,7 @@
     <name>MOD_WOW_BLUE_TRACKER</name>
     <author>Branko Wilhelm</author>
     <creationDate>Jan 2014</creationDate>
-    <copyright>(C) 2014 Branko Wilhelm</copyright>
+    <copyright>(c) 2014 - 2015 Branko Wilhelm</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
     <authorEmail>branko.wilhelm@gmail.com</authorEmail>
     <authorUrl>www.z-index.net</authorUrl>
@@ -25,8 +25,12 @@
     <updateservers>
         <server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
     </updateservers>
+    <media folder="media" destination="mod_wow_blue_tracker">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
     <config>
-        <fields name="params" addfieldpath="/modules/mod_wow_blue_tracker/fields/">
+        <fields name="params" addfieldpath="/plugins/system/wow/fields/">
             <fieldset name="basic">
                 <field name="language" type="list" default="" required="true" label="MOD_WOW_BLUE_TRACKER_LANGUAGE_LABEL">
                     <option>JSELECT</option>
@@ -47,8 +51,6 @@
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
-                <field name="cache_time" type="text" filter="integer" default="60" size="5" required="true" label="MOD_WOW_BLUE_TRACKER_CACHE_LABEL" description="MOD_WOW_BLUE_TRACKER_CACHE_DESC" />
-                <field name="timeout" type="text" filter="integer" default="10" size="5" required="true" label="MOW_WOW_BLUE_TRACKER_TIMEOUT_LABEL" description="MOW_WOW_BLUE_TRACKER_TIMEOUT_DESC" />
                 <field name="ajax" type="ajax" class="btn-group" label="Ajax" default="0" />
             </fieldset>
             <fieldset name="advanced">
