@@ -12,7 +12,6 @@
     <files>
         <filename module="mod_wow_blue_tracker">mod_wow_blue_tracker.php</filename>
         <filename>helper.php</filename>
-        <folder>fields</folder>
         <folder>tmpl</folder>
     </files>
     <scriptfile>script.installer.php</scriptfile>
