@@ -17,8 +17,6 @@ if (!class_exists('WoWModuleAbstract')) {
     return;
 }
 
-domix::err();
-
 JLoader::register('ModWowBlueTrackerHelper', __DIR__ . '/helper.php');
 
 $posts = ModWowBlueTrackerHelper::getData($params);
